@@ -1,0 +1,237 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  line-height: 1.6;
+  background: #ffffff;
+  color: #0f3d2e;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ================= LAYOUT ================= */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 70vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("../assets/birds.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 0;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  text-decoration: none;
+}
+
+.logo span {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.logo img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+nav a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 18px;
+  transition: background 0.25s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.nav-cta {
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+}
+
+nav a.btn {
+  border: 1px solid #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+/* ================= HERO TEXT ================= */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 900px;
+  margin-top: 40px;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #e0eae3;
+  margin-bottom: 30px;
+  max-width: 750px;
+  letter-spacing: 0.07em;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 3rem 0;
+}
+
+.section.light {
+  background: #f9fafb;
+}
+
+.section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.section-text {
+  max-width: 700px;
+}
+
+/* ================= SPLIT ================= */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.image-placeholder img {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+/* ================= NOTICE ================= */
+.notice {
+  background: #eef2f3;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #0f3d2e;
+  color: #ffffff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .split {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .split > div:first-child {
+    order: 1;
+  }
+
+  .image-placeholder {
+    order: 2;
+  }
+}
+
+/* ================= MOBILE HERO ================= */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 85vh;
+    padding: 0 6%;
+  }
+
+  .hero-content {
+    margin-top: 80px;
+    max-width: 100%;
+  }
+
+  .hero h1,
+  .hero h2 {
+    font-size: 2.1rem;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 18px 0;
+  }
+
+  .nav-links a {
+    margin-left: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
