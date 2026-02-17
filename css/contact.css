@@ -6,17 +6,23 @@
   
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background: #ffffff;
   color: #0f3d2e;
   line-height: 1.6;
   font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ================= LAYOUT ================= */
 .container {
-  width: 90%;
-  max-width: 1100px;
+  width: 92%;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -200,3 +206,4 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }}
+
